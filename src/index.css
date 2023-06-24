@@ -24,8 +24,11 @@ html {
 
 .fijar {
     overflow: hidden;
-    height: 100vh;
+    height: 80vh;
 }
+
+   
+
 
 h1 {
     font-size: 4rem;
@@ -67,18 +70,36 @@ header h1 {
         width: 60rem;
     }
 }
-.formulario legend {
-    font-size: 3.6rem;
-    text-align: center;
-    display: block;
-    text-transform: uppercase;
-    color: var(--blanco);
-    margin-bottom: 4rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--azul);
+@media (min-width: 450px){
+    .formulario legend {
+        font-size: 3.6rem;
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        color: var(--blanco);
+        margin-bottom: 4rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--azul);
+    }
+
 }
+
+@media (max-width: 450px){
+        .formulario legend {
+            font-size: 3.6rem;
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+            color: var(--blanco);
+            margin-bottom: 4rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--azul);
+        }
+}
+
 .formulario .campo {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 2rem;
 }
 
@@ -89,6 +110,8 @@ header h1 {
     margin-bottom: 2rem;
 }
 
+
+
 .formulario input[type="text"],
 .formulario input[type="number"] {
     background-color: var(--gris-claro);
@@ -98,6 +121,22 @@ header h1 {
     flex: 1;
     font-size: 1.6rem;
 }
+
+
+@media  (max-width : 500px) {
+        
+ 
+
+    .formulario input::placeholder{
+        font-size: 2rem;
+   
+    }
+
+}
+
+
+
+    
 .formulario input[type="submit"] {
     background-color: #0ee7cd;
     border: none;
